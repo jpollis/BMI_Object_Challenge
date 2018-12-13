@@ -4,6 +4,7 @@ var john = {
 	height: 2,
 	calcBmi: function() {
 	  this.bmi = this.mass / this.height * this.height
+	  return this.bmi;
 	}
 }
 
@@ -13,14 +14,14 @@ var mark = {
 	height: 2,
 	calcBmi: function() {
 	  this.bmi = this.mass / this.height * this.height
+	  return this.bmi;
 	}
 }
 
+
 function compareBmi() {
-  john.calcBmi();
-  mark.calcBmi();
   
-  if (john.bmi > mark.bmi) {
+  if (john.calcBmi() > mark.calcBmi()) {
 	console.log(john.fullName + ' has a higher BMI');
   } else if (john.bmi < mark.bmi) {
 	console.log(mark.fullName + ' has a higher BMI');
